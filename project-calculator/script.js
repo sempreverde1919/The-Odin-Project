@@ -1,4 +1,7 @@
-let num1, num2, operator;
+let num1, num2, operator, displayValue;
+
+const numBtns = document.querySelectorAll(".number");
+const display = document.querySelector(".display");
 
 function add(num1, num2){
     return num1+num2
@@ -27,10 +30,17 @@ function operate(num1, operator, num2){
         case "*":
             multiply(num1, num2);
             break;
-        case"/":
+        case "/":
             divide(num1, num2);
             break;
         default:
             console.log("No such oparation")
     }
 }
+
+numBtns.forEach(btn => btn.addEventListener("click"), (e)=>{
+    displayValue = e.target.value;
+    console.log(displayValue);
+    display.textContent = "";
+    display.textContent.concat(e.target.value.toString())
+})
