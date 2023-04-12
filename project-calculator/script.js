@@ -46,14 +46,14 @@ numBtns.forEach(btn => btn.addEventListener("click", (e)=>{
 }));
 
 opBtns.forEach(btn=> btn.addEventListener("click", (e)=>{
-    num1 = displayValue;
+    num1 = +displayValue;
     operator = e.target.value;
     display.textContent = "";
     displayValue = display.textContent;
 }));
 
 equalBtn.addEventListener("click", (e)=>{
-    num2 = displayValue;
+    num2 = +displayValue;
     console.log(num1);
     console.log(num2);
     console.log(operator);
