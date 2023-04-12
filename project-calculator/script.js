@@ -54,11 +54,6 @@ opBtns.forEach(btn=> btn.addEventListener("click", (e)=>{
 
 equalBtn.addEventListener("click", (e)=>{
     num2 = +displayValue;
-    console.log(num1);
-    console.log(num2);
-    console.log(operator);
-    
     solution = operate(num1, operator, num2);
-    console.log(solution);
     display.textContent = solution;
 })
