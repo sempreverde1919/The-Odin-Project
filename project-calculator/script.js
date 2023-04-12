@@ -41,5 +41,4 @@ function operate(num1, operator, num2){
 numBtns.forEach(btn => btn.addEventListener("click", (e)=>{
     display.textContent += e.target.value.toString();
     displayValue = display.textContent;
-    console.log(displayValue);
 }));
