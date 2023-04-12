@@ -1,4 +1,4 @@
-let num1, num2, operator, solution, displayValue;
+let num1=0, num2=0, operator, solution, displayValue;
 
 const numBtns = document.querySelectorAll(".number");
 const opBtns = document.querySelectorAll(".operator");
@@ -48,12 +48,12 @@ numBtns.forEach(btn => btn.addEventListener("click", (e)=>{
 opBtns.forEach(btn=> btn.addEventListener("click", (e)=>{
     num1 = +displayValue;
     operator = e.target.value;
-    display.textContent = "";
-    displayValue = display.textContent;
+    displayValue = operate(num1, operator, num2);
+    display.textContent = displayValue;
 }));
 
 equalBtn.addEventListener("click", (e)=>{
     num2 = +displayValue;
-    solution = operate(num1, operator, num2);
-    display.textContent = solution;
+    displayValue = operate(num1, operator, num2);
+    display.textContent = displayValue;
 })
