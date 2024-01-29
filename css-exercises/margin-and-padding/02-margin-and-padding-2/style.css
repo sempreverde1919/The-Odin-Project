@@ -29,19 +29,13 @@ body {
 .button-container {
   background: #e3f4ff;
   padding: 8px;
-  margin: 0px auto;
-}
-
-p{
   text-align: center;
-  margin: 0;
-  padding: 0;
 }
 
 button {
   display: block;
   background: white;
   border: 1px solid #eee;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 8px 24px;
 }
