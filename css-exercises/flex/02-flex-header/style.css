@@ -12,6 +12,7 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
+  margin: 2px;
 }
 
 ul {
@@ -20,6 +21,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 2px;
 }
 
 a {
