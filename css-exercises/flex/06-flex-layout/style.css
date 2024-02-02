@@ -18,6 +18,7 @@ body {
 
 .content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -37,7 +38,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
-  padding: 4px;
+  padding: 8px;
 }
 
 input {
@@ -52,7 +53,6 @@ input {
   display: flex;
   margin: 0px;
   padding: 0px;
-  gap: 5px;
 }
 .left-links {
   justify-content: flex-start;
@@ -63,6 +63,7 @@ input {
 
 li {
   list-style-type: none;
+  padding: 8px 4px;
 }
 
 a {
