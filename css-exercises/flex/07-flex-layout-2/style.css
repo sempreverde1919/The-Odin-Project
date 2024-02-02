@@ -34,6 +34,7 @@ body {
 }
 
 .sidebar {
+  height: 100%;
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
@@ -52,6 +53,7 @@ a{
 }
 
 .card-container {
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   padding: 32px;
