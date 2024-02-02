@@ -21,7 +21,7 @@ body {
 
 .main {
   display: flex;
-  height: 100%;
+  flex: 1 0 0;
 }
 
 .footer {
@@ -34,7 +34,6 @@ body {
 }
 
 .sidebar {
-  height: 100%;
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
