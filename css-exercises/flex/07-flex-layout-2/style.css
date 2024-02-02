@@ -16,11 +16,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 16px;
+  padding-left: 16px;
 }
 
 .main {
   display: flex;
+  height: 100%;
 }
 
 .footer {
@@ -61,5 +62,6 @@ a{
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
   width: 300px;
+  margin: 16px;
   padding: 16px;
 }
