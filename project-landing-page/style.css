@@ -12,6 +12,7 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 80%;
     height: 100%;;
 }
@@ -45,6 +46,8 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 24px;
     background-color: #1F2937;
-    color: #f9faF8;
+    color: #E5E7EB;
+    font-size: 18px;
 }
