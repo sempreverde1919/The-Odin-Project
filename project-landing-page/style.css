@@ -2,7 +2,29 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #000;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
+}
+
+.header {
+    background-color: #1F2937;
+}
+
+.logo {
+    color: #F9FAF8;
+    font-size: 24px;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #E5E7EB;
 }
