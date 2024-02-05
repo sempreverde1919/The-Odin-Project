@@ -54,6 +54,9 @@ a{
     display: flex;
     background-color: #3882F6;
     color: #F9FAF8;
+    border-radius: 5px;
+    flex-basis: 80%;
+    margin: 48px 52px;
 }
 
 
