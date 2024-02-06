@@ -41,6 +41,47 @@ a {
   font-size: 18px;
 }
 
+/*-----------------------------------*/
+.action-container, .action-content {
+display: flex;
+justify-content: center;
+align-items: center;
+color: #F9F8FA;
+}
+
+.action-content {
+background-color: #3882F6;
+width: 100%;
+border-radius: 5px;
+margin: 100px 150px;
+padding: 50px 120px;
+}
+
+.action-left {
+flex-basis: 70%;
+}
+.action-right {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-basis: 30%;
+}
+
+h3{
+font-size: 24px;
+margin: 5px 0;
+}
+.action-right button{
+padding: 6px 32px;
+background-color: transparent;
+border: 2px solid #fff;
+border-radius: 5px;
+color: #fff;
+font-size: 18px;
+
+}
+
+/*-----------------------------------*/
 footer {
 justify-content: center;
 padding: 32px 150px;
