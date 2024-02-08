@@ -6,16 +6,16 @@
 }
 
 body {
-  background-color: #000;
+  background-color: #202020;
 }
 
 .wrapper {
   background-color: #fff;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
-.flex-container {
+.flex-container, header, .hero-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,9 +23,10 @@ body {
 }
 
 /*-----------------------------------*/
-header.flex-container {
+header {
   justify-content: space-between;
   background-color: #1F2937;
+  padding-top: 18px;
 }
 
 .logo {
@@ -47,9 +48,11 @@ a {
 }
 
 /*-----------------------------------*/
-.hero{
+.hero-container{
   background-color: #1F2937;
   gap: 32px;
+  padding-top: 50px;
+  padding-bottom: 80px;
 }
 
 .hero-left, .hero-right { 
