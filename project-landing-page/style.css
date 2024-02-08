@@ -15,12 +15,17 @@ body {
   margin: 0 auto;
 }
 
-header, footer {
+.flex-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: #1F2937;
   padding: 24px 150px;
+}
+
+/*-----------------------------------*/
+header.flex-container {
+  justify-content: space-between;
+  background-color: #1F2937;
 }
 
 .logo {
@@ -42,14 +47,36 @@ a {
 }
 
 /*-----------------------------------*/
-.action-container, .action-content {
+.hero-left, .hero-right {
+  flex-basis: 50%;
+}
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*-----------------------------------*/
+.info {
+  flex-direction: column;
+}
+.info-content {
+  display: flex;
+}
+
+/*-----------------------------------*/
+.quote {
+  flex-direction: column;
+}
+
+
+/*-----------------------------------*/
+.action-content {
 display: flex;
 justify-content: center;
 align-items: center;
 color: #F9F8FA;
-}
-
-.action-content {
 background-color: #3882F6;
 width: 100%;
 border-radius: 5px;
@@ -83,7 +110,6 @@ font-size: 18px;
 
 /*-----------------------------------*/
 footer {
-justify-content: center;
-padding: 32px 150px;
+background-color: #1F2937;
 color: #E5E7EB;
 }
