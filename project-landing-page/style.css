@@ -15,7 +15,7 @@ body {
   margin: 0 auto;
 }
 
-.flex-container, header, .hero-container {
+.flex-container, header, .hero-container, .action-container, footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,12 +51,13 @@ a {
 .hero-container{
   background-color: #1F2937;
   gap: 32px;
-  padding-top: 50px;
-  padding-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 .hero-left, .hero-right { 
   flex-basis: 50%;
+  height: 250px;
   color: #E5E7EB;
   font-size: 18px;
 }
@@ -64,14 +65,24 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #444;
-  padding: 50px 0;
+  background-color: #666;
 }
 
 h1{
   color: #F9FAF8;
   font-size: 48px;
   font-weight: 900;
+}
+
+.hero-left button {
+  background-color: #3882F6;
+  color: #fff;
+  border: none;
+  padding: 6px 32px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
 }
 
 
@@ -133,14 +144,14 @@ h2 {
 /*-----------------------------------*/
 .action-content {
 display: flex;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
+gap: 50px;
 color: #F9F8FA;
 background-color: #3882F6;
-width: 100%;
 border-radius: 5px;
-margin: 100px 150px;
-padding: 50px 120px;
+margin: 80px 0;
+padding: 30px 90px;
 }
 
 .action-left {
@@ -164,7 +175,6 @@ border: 2px solid #fff;
 border-radius: 5px;
 color: #fff;
 font-size: 18px;
-
 }
 
 /*-----------------------------------*/
