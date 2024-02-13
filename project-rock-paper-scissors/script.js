@@ -1,7 +1,9 @@
+const buttons = document.querySelectorAll('button');
+
 let playerPoints = 0;
 let computerPoints = 0;
-playGame();
-
+//playGame();
+/*
 function playGame(){
   for(let i=0; i<5; i++){
     let playerSelection = prompt("Rock, paper or scissors?");
@@ -10,6 +12,15 @@ function playGame(){
   }
   console.log(getWinner());
 }
+*/
+
+
+buttons.forEach(button => button.addEventListener('click', ()=>{
+ let x = playRound(button.value, getComputerChoice());
+  console.log(x);
+}))
+
+
 
 function getComputerChoice(){
   let choice = Math.floor(Math.random()*3);
