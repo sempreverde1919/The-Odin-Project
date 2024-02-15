@@ -1,5 +1,14 @@
-let num1, num2, operator;
+let num1, num2, operator, displayValue;
 
+const display = document.querySelector('.display');
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => button.addEventListener('click', e => populateDisplay(e.target.value)));
+
+function populateDisplay(digit){
+  display.textContent += digit;
+  displayValue = display.textContent;
+}
 
 function operate(x, operator, y){
     switch(operator){
