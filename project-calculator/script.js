@@ -1,13 +1,25 @@
 let num1, num2, operator, displayValue;
 
 const display = document.querySelector('.display');
-const buttons = document.querySelectorAll('button');
+const numBttn = document.querySelectorAll('.number-button');
+const clearBtn = document.querySelector('.clear-button');
 
-buttons.forEach(button => button.addEventListener('click', e => populateDisplay(e.target.value)));
+numBttn.forEach(button => button.addEventListener('click', e => numberToDisplay(e.target.value)));
 
-function populateDisplay(digit){
-  display.textContent += digit;
-  displayValue = display.textContent;
+clearBtn.addEventListener('click', () => {
+  display.textContent = "0";
+})
+
+function numberToDisplay(digit){
+  if(display.textContent==="0"){
+    if(digit==="0"){
+      return
+    } else{
+      display.textContent = digit
+    }
+  } else{
+    display.textContent += digit
+  }
 }
 
 function operate(x, operator, y){
