@@ -5,70 +5,57 @@ const displayTop = document.querySelector('.display-top');
 const numBttn = document.querySelectorAll('.number-button');
 const clearBtn = document.querySelector('.clear-button');
 const opBtn = document.querySelectorAll('.operator-button');
+const equalBtn = document.querySelector('.equal-button');
 
-numBttn.forEach(button => button.addEventListener('click', e => numberToDisplay(e.target.value)));
-
+numBttn.forEach(button => button.addEventListener('click', e => {
+  if(displayBottom.textContent==="0"){
+      if(e.target.value!=="0") displayBottom.textContent = e.target.value
+   } else{
+    displayBottom.textContent += e.target.value
+  }
+  displayValue = +(displayBottom.textContent);
+}));
+  
 clearBtn.addEventListener('click', () => {
+  storedValue = 0;
+  displayValue = 0;
   displayTop.textContent = "";
-  displayBottom.textContent = "0";
+  displayBottom.textContent = displayValue;
 })
 
 opBtn.forEach(button => button.addEventListener('click', e => {
   displayValue = +(displayBottom.textContent);
-  operator = e.target.value;
-  if(['+','-','*','/'].includes(displayTop.textContent.slice(-1))){
+  let lastChar = displayTop.textContent.slice(-1);
+  if(['+','-','*','/'].includes(lastChar)){
+    operator = lastChar;
     storedValue = operate(storedValue, operator, displayValue);
-    displayValue = 0;
   } else{
     storedValue = displayValue;
-    displayValue = 0;
-  }
+  } 
+  operator = e.target.value;
   displayTop.textContent = `${storedValue} ${operator}`;
+  displayValue = 0;
   displayBottom.textContent = displayValue;
 }))
 
-
-
-
-function numberToDisplay(digit){
-  if(displayBottom.textContent==="0"){
-    if(digit==="0"){
-      return
-    } else{
-      displayBottom.textContent = digit
-    }
-  } else{
-    displayBottom.textContent += digit
+equalBtn.addEventListener('click', () => {
+  if(storedValue && operator){
+        displayTop.textContent = `${storedValue} ${operator} ${displayValue} =`;
+    displayValue = operate(storedValue, operator, displayValue);
+    displayBottom.textContent = displayValue;
   }
-}
-
+})
 
 
 function operate(x, operator, y){
     switch(operator){
         case "+":
-            return add(x,y);
+            return x + y ;
         case "-":
-            return subtract(x,y);
+            return x - y;
         case "*":
-            return multipy(x,y);
+            return x * y;
         case "/":
-            return divide(x,y);
+            return x / y;
     }
-}
-
-function add(x,y){
-    return x + y
-}
-
-function subtract(x,y){
-    return x - y
-}
-
-function multipy(x,y){
-    return x * y
-}
-
-function divide(x,y){
-    return x / y
 }
