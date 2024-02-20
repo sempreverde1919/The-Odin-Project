@@ -50,12 +50,25 @@ equalBtn.addEventListener('click', () => {
 function operate(x, operator, y){
     switch(operator){
         case "+":
-            return x + y ;
+            return add(x,y);
         case "-":
-            return x - y;
+            return subtract(x,y);
         case "*":
-            return x * y;
+            return multiply(x,y);
         case "/":
-            return x / y;
+            return divide(x,y);
     }
+}
+
+function add(x, y){
+  return Math.round((x+y)*1000)/1000;
+}
+function subtract(x, y){
+  return Math.round((x-y)*1000)/1000;
+}
+function multiply(x, y){
+  return Math.round((x*y)*1000)/1000;
+}
+function divide(x, y){
+  return Math.round((x/y)*1000)/1000;
 }
