@@ -1,44 +1,47 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;  
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ASIDE AND IT'S ELEMENTS*/
+aside {
+  flex-grow: 1;
+  flex-basis: 150px;
   
-  .wrapper {
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   
-  .left-container{
-    flex-grow: 1;
-    flex-basis: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-  }
-  
-  .right-container{
-    flex-grow: 2;
-    flex-basis: 300px;
-    display: flex;
-    flex-direction: column;
-    heigth: 10%;
-  }
-  
-  .row{
-    flex-grow: 1;
-    flex-basis: 150px;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  div {
-    border: 1px solid red;
-  }
+  background-image: url('bg.jpg');
+  background-size: cover;
+}
+
+.logo-container {
+  height: calc(100%/3);
+}
+
+
+/* MAIN AND IT'S ELEMENTS*/
+main {
+  flex-grow: 2;
+  flex-basis: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  flex-grow: 1;
+  flex-basis: 150px;
+}
+
+/****FOR PLANNING REASON*****/
+div, section, h1 {
+  border: 1px solid red;
+}
