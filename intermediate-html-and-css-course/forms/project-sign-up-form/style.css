@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+  }
+  
+  .wrapper {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .left-container{
+    flex-grow: 1;
+    flex-basis: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+  
+  .right-container{
+    flex-grow: 2;
+    flex-basis: 300px;
+    display: flex;
+    flex-direction: column;
+    heigth: 10%;
+  }
+  
+  .row{
+    flex-grow: 1;
+    flex-basis: 150px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  div {
+    border: 1px solid red;
+  }
