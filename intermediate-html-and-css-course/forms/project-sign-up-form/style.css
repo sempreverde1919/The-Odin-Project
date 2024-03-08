@@ -19,6 +19,10 @@
   flex-wrap: wrap;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 /* ASIDE AND IT'S ELEMENTS*/
 aside {
   flex-grow: 1;
@@ -129,9 +133,12 @@ input:focus {
   outline: none;
   border: 1px solid #1d4ed8;
 }
+input.error{
+  outline: none;
+  border: 1px solid #c23838;
+}
 
-.error {
-  visibility: hidden;
+.error-msg {
   color: #c23838;
   font-size: 0.6rem;
   font-weight: 500;
