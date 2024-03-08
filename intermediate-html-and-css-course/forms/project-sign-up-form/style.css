@@ -52,8 +52,6 @@ aside {
 }
 
 
-
-
 /* MAIN AND IT'S ELEMENTS*/
 main {
   flex-grow: 2;
@@ -98,17 +96,28 @@ section.middle{
 label {
   display: block;
   margin: 20px 0 5px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 500;
 }
 
-input{
-  border: 1px solid #000;
+input {
+  width: 200px;
+  border: 1px solid #E5E7EB;
   border-radius: 5px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   padding: 5px;
 }
+input:focus {
+  outline: none;
+  border: 1px solid #1d4ed8;
+}
 
+.error {
+  visibility: hidden;
+  color: #c23838;
+  font-size: 0.6rem;
+  font-weight: 500;
+}
 
 /*---------*/
 section.bottom {
