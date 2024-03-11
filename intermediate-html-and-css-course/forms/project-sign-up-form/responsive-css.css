@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*DISPLAY*/
+  
+  .wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .bottom {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+  }
+  
+  .left {
+    flex-grow: 1;
+    flex-basis: 150px;
+  }
+  
+  .right {
+    flex-grow: 3;
+    flex-basis: 300px;
+  }
+  
+  /*----------------*/
+  
+  
+  
+  div, section {
+    border: 1px solid red;
+  }
+  
