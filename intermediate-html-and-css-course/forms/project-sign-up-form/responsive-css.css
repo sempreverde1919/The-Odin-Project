@@ -1,46 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: "Norse Bold";
+  src: url(https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Roboto, sans-serif;
   }
   
-  /*DISPLAY*/
+/* ----- LAYOUT ----- */
   
-  .wrapper {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+   
+  background-image: url(bg.jpg), url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=1862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-color: #596D48;
+}
   
-  .top {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+.top {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
   
-  .bottom {
-    flex-grow: 3;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-  }
+.bottom {
+  flex-grow: 2;  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
   
-  .left {
-    flex-grow: 1;
-    flex-basis: 150px;
-  }
+.left {
+  flex-grow: 1;
+  flex-basis: 150px;
+  max-width: 500px;
+}
+
+.bottom .left {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+}
   
-  .right {
-    flex-grow: 3;
-    flex-basis: 300px;
-  }
+.right {
+  flex-grow: 3;
+  flex-basis: 300px;
+  background-color: #f9fafb;
+}
+
+.bottom .right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  flex-grow: 1;
+  background-color: #fff;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+}
+
+.account-container {
+  flex-grow: 1.2;
+}
+
+/*----------------*/
+
+.credits {
+  text-align: center;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+.credits a {
+  color: #fff;
+}
   
-  /*----------------*/
   
-  
-  
-  div, section {
-    border: 1px solid red;
-  }
+div, section {
+  border: 1px solid red;
+}
   
