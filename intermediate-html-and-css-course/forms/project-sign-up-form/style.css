@@ -18,12 +18,11 @@
 }
 
 /* ----- LAYOUT ----- */
-  
+
 .wrapper {
   height: 100vh;
   display: flex;
   flex-direction: column;
-   
   background-image: url(bg.jpg), url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=1862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-size: 700px ;
   background-repeat: no-repeat;
@@ -46,20 +45,14 @@
   
 .left {
   flex-grow: 1;
-  flex-basis: 200px;
-  max-width: 500px;
+  flex-basis: 200px;  
 }
 
-.top .left {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
+.top .left,
 .bottom .left {
   display: flex;
   justify-content: center;
-  align-self: flex-start;
+  align-items: flex-end;
 }
   
 .right {
@@ -81,15 +74,13 @@
 }
 
 .form-container {
-  flex-grow: 1;
   background-color: #fff;
   box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
-  padding: 20px 30px 30px 30px;;
+  padding: 20px 30px 30px 30px;  
 }
 
-.account-container {
-  flex-grow: 2;  
-  padding: 20px 30px;
+.account-container {  
+  padding: 20px 30px;  
 }
 
 /* ----- ELEMENTS ----- */
@@ -130,11 +121,11 @@ h2{
 h2:nth-of-type(3){
   margin-top: 20px;
 }
-  
+
 .input-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; 
+  gap: 30px; 
 }
 
 label {
@@ -176,13 +167,13 @@ button[type="submit"]{
   font-weight: 500;
 }
 
-.account p {
+.account-container p {
   margin: 30px 0;
   font-size: 0.9rem;
   font-weight: 500;
 }
 
-.account a{
+.account-container a{
   text-decoration: none;
   color: #596D48;
   font-weight: 600;
