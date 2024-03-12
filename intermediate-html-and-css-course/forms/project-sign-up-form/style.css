@@ -2,9 +2,9 @@
 
 @font-face {
   font-family: "Norse Bold";
+  src: url(Norse-Bold.oft);
   src: url(https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf);
 }
-
 
 * {
   box-sizing: border-box;
@@ -13,43 +13,94 @@
   font-family: Roboto, sans-serif;
 }
 
-.wrapper {
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .hidden {
   visibility: hidden;
 }
 
-/* ASIDE AND IT'S ELEMENTS*/
-aside {
-  flex-grow: 1;
-  flex-basis: 150px;
+/* ----- LAYOUT ----- */
   
+.wrapper {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  
+   
+  background-image: url(bg.jpg), url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=1862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: 700px ;
+  background-repeat: no-repeat;
   background-color: #596D48;
-  background-image: url('bg.jpg');
-  background-size: cover;
+}
+  
+.top {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+  
+.bottom {
+  flex-grow: 3;  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+  
+.left {
+  flex-grow: 1;
+  flex-basis: 200px;
+  max-width: 500px;
 }
 
-.logo-container {
-  height: calc(100% / 3);
+.top .left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bottom .left {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+}
+  
+.right {
+  flex-grow: 3;
+  flex-basis: 500px;
+  background-color: #f9fafb;
+}
+
+.top .right {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding: 30px 80px 30px 30px;
 }
 
+.bottom .right { 
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  flex-grow: 1;
+  background-color: #fff;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+  padding: 20px 30px 30px 30px;;
+}
+
+.account-container {
+  flex-grow: 2;  
+  padding: 20px 30px;
+}
+
+/* ----- ELEMENTS ----- */
+
 .logo {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0, 0.3);
+  background-color: rgba(0,0,0, 0.4);
   padding: 10px;
 }
 .logo img {
@@ -73,46 +124,17 @@ aside {
   color: #fff;
 }
 
-
-/* MAIN AND IT'S ELEMENTS*/
-main {
-  flex-grow: 2;
-  flex-basis: 300px;
-  display: flex;
-  flex-direction: column;
-}
-
-section {
-  flex-grow: 1;
-  flex-basis: 30%;
-  background-color: #f9fafb;
-}
-
 h2{
   font-size: 1.2rem;
 }
 h2:nth-of-type(3){
   margin-top: 20px;
 }
-
-/*---------*/
-section.top {
-  padding: 50px 80px 30px 30px;
-}
-
-/*---------*/
-section.middle{
-  background-color: #fff;
-  padding: 20px 30px 30px 30px;;
-  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
-  z-index: 2;
-}
-
+  
 .input-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  
+  gap: 20px; 
 }
 
 label {
@@ -144,11 +166,6 @@ input.error{
   font-weight: 500;
 }
 
-/*---------*/
-section.bottom {
-  padding: 20px 30px;
-}
-
 button[type="submit"]{
   background-color: #596D48;
   border: 0;
@@ -159,14 +176,15 @@ button[type="submit"]{
   font-weight: 500;
 }
 
-.bottom p {
+.account p {
   margin: 30px 0;
   font-size: 0.9rem;
   font-weight: 500;
 }
 
-.bottom a{
+.account a{
   text-decoration: none;
   color: #596D48;
   font-weight: 600;
 }
+
