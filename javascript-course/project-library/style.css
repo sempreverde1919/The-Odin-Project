@@ -1,0 +1,16 @@
+div {
+    border: 1px solid blue;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .item {
+    display: flex;
+  }
+  
+  .item > div {
+    flex-grow: 1;
+  }
